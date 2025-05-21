@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}歡迎{% endblock %}
+{% block content %}
+<h2 class="text-center mb-4">
+    歡迎，{{ user.username | add_stars | upper }}！
+</h2>
+<div class="d-flex justify-content-center flex-wrap gap-3">
+    <a class="btn btn-secondary"
+       href="{{ url_for('edit_profile', iid=user.iid) }}">修改基本資料</a>
+    <a class="btn btn-danger"
+       onclick="return confirm('若刪除這個使用者，所有相關記錄將一併刪除，是否繼續？')"
+       href="{{ url_for('delete_user', iid=user.iid) }}">刪除使用者</a>
+    <a class="btn btn-outline-primary"
+       href="{{ url_for('index') }}">返回首頁</a>
+</div>
+{% endblock %}

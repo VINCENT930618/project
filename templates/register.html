@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}註冊{% endblock %}
+{% block content %}
+<h2 class="text-center mb-4">會員註冊</h2>
+<form method="post" class="mx-auto form-card" style="max-width:400px;">
+    <div class="mb-3">
+        <label class="form-label">用戶名 *</label>
+        <input type="text" name="username" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">電子郵件 *</label>
+        <input type="email" name="email" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">密碼 *</label>
+        <input type="password" name="password" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">手機</label>
+        <input type="text" name="phone" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">出生年月日</label>
+        <input type="date" name="birthdate" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-success w-100">註冊</button>
+</form>
+{% endblock %}
